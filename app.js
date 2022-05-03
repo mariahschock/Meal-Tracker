@@ -10,7 +10,7 @@ let recipes = [];
 //let ingredients = [];
 
 
-function renderIngredients() {
+function displayIngredients() {
     ingredientList.textContent = '';
     for (let recipe of recipes) {
         const li = renderIngredient(recipe);
@@ -30,14 +30,14 @@ form.addEventListener('submit', (e) => {
     recipes.push(recipe);
     console.log('list of recipes', recipe);
     
-    renderIngredients();
+    displayIngredients();
     form.reset();
 });
 
 remove.addEventListener('click', () => {
     recipes.pop();
 
-    renderIngredients();
+    displayIngredients();
 });
   // get user input
   // use user input to update state 
