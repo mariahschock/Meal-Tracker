@@ -5,13 +5,13 @@ const form = document.getElementById('add-ingredients');
 const ingredientList = document.getElementById('ingredient-list');
 // let state
 let recipes = [];
-let ingredients = [];
+//let ingredients = [];
 
 
 function renderIngredients() {
     ingredientList.textContent = '';
-    for (let ingredient of ingredients) {
-        const li = renderIngredient(ingredient);
+    for (let recipe of recipes) {
+        const li = renderIngredient(recipe);
         ingredientList.append(li);
     }
 }
@@ -29,6 +29,7 @@ form.addEventListener('submit', (e) => {
     console.log('list of recipes', recipe);
     
     renderIngredients();
+    form.reset();
 
 });
   // get user input
