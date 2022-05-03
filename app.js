@@ -3,6 +3,8 @@ import { renderIngredient } from './utils.js';
 // import functions and grab DOM elements
 const form = document.getElementById('add-ingredients');
 const ingredientList = document.getElementById('ingredient-list');
+const remove = document.getElementById('remove');
+
 // let state
 let recipes = [];
 //let ingredients = [];
@@ -30,7 +32,12 @@ form.addEventListener('submit', (e) => {
     
     renderIngredients();
     form.reset();
+});
 
+remove.addEventListener('click', () => {
+    recipes.pop();
+
+    renderIngredients();
 });
   // get user input
   // use user input to update state 
