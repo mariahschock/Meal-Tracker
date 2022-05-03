@@ -24,7 +24,6 @@ function displayIngredients() {
 }
 
 function displayMeals() {
-    mealList.textContent = '';
     for (let meal of meals) {
         const li = renderMeal(meal);
         mealList.append(li);
@@ -53,7 +52,9 @@ remove.addEventListener('click', () => {
     displayIngredients();
 });
 
-save.addEventListener('click', () => {  
+save.addEventListener('click', (e) => { 
+    e.preventDefault(); 
+    mealList.textContent = '';
     let meal = {
         ingredientCount: recipes.length,
         name: mealName.value,
@@ -62,7 +63,6 @@ save.addEventListener('click', () => {
     console.log('list of meals', meal);
 
     displayMeals();
-    mealList.value = '';
 });
   // get user input
   // use user input to update state 
