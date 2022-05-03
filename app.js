@@ -1,7 +1,7 @@
 import { renderIngredient } from './utils.js';
 
 // import functions and grab DOM elements
-const form = document.getElementById('add-ingredient');
+const form = document.getElementById('add-ingredients');
 const ingredientList = document.getElementById('ingredient-list');
 // let state
 let recipes = [];
