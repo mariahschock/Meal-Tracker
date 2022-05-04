@@ -1,1 +1,39 @@
 /* add home page styles here */
+#add-ingredients {
+    display:flex;
+    flex-direction: column;
+    justify-content:left;
+    background-color: lightpink;
+    border:solid 1px pink;
+} 
+button {
+    display: flex;
+}
+.ingredient-list {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    background-color:cornsilk;
+    width: 100%;
+}
+h1 {
+    margin: 10px;
+    font-family:fantasy;
+}
+label {
+    margin: 10px;
+    justify-content: space-between;
+}
+
+#save-meals {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color:lightcyan;
+    border:solid 1px cyan;
+}
+.meals {
+    background-color: honeydew;
+    
+}

@@ -19,52 +19,58 @@
         </div>
     </header>
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
+        <h1>Meal Tracker</h1>
+        <section>
+            <h3>Add Ingredients</h3>
+            <div class="recipe">
+                <form id="add-ingredients">
+                    <label>
+                        Ingredient:
+                        <input type="text" name="ingredient" id="ingredient"/>
+                    </label>
+                    <label>
+                        Quantity:
+                        <input type="text" name="quantity" id="quantity"/>
+                    </label>
+                    <label>
+                        Measurement:
+                        <select name="measurement" id="serving">
+                            <option value="cups">Cups</option>
+                            <option value="grams">Grams</option>
+                            <option value="milliliter">Milliliter</option>
+                            <option value="teaspoons">Teaspoons</option>
+                            <option value="tablespoons">Tablespoons</option>
+                        </select>
+                    </label>
+                    <button type="submit">Add Ingredient</button>
+                </form>
+                <div class="ingredient-list">
+                    <ul id="ingredient-list"></ul>
+                    <button id="remove">Remove Last Item</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h3>Save Meal</h3>
+            <div class="save">
+                <form id="save-meals">
+                    <label>
+                        Meal Name:
+                        <input type="text" name="meal-name" id="meal-name"/>
+                    </label>
+                    <button id ="save-button">Save Meal</button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <h2>Meals</h2>
+            <div class="meals">
+                <ul id="meal-list"></ul>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2022 Alchemy Code Lab</div>
     </footer>
 
     <script type="module" src="./app.js"></script>
