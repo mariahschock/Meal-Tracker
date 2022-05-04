@@ -29,6 +29,17 @@ function displayMeals() {
         mealList.append(li);
     }
 }
+
+function resetIngredients() {
+    recipes = [];
+    ingredientList.textContent = '';
+}
+
+function resetMeals() {
+    meals = [];
+    mealList.textContent = '';
+}
+
 // set event listeners 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -40,7 +51,7 @@ form.addEventListener('submit', (e) => {
         measurement: addRecipe.get('measurement'),
     };
     recipes.push(recipe);
-    console.log('list of recipes', recipe);
+    //console.log('list of recipes', recipe);
     
     displayIngredients();
     form.reset();
@@ -60,10 +71,10 @@ save.addEventListener('click', (e) => {
         name: mealName.value,
     };
     meals.push(meal);
-    console.log('list of meals', meal);
+    //console.log('list of meals', meal);
 
     displayMeals();
+    resetIngredients();
+    resetMeals();
 });
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+
